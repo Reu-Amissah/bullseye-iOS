@@ -10,10 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("PUT THE BULLSEYE AS CLOSE AS YOU CAN TO")
+                .bold()
+                .multilineTextAlignment(.center)
+                .lineSpacing(4.0)
+                .font(.footnote)
+                .kerning(2.0)
+            Text("89")
+            HStack{
+                Text("1")
+                Slider(value: .constant(50), in: 1.0...100.0)
+                Text("100")
+            }
+            Button(action: {}) {
+                Text("Hit Me")
+            }.padding()
+            
         }
         .padding()
     }
