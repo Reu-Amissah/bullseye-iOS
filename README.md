@@ -1,4 +1,4 @@
-# bulleye-iOS
+# bullseye-iOS
 
 This a `code along` project design by [Ray Wenderlich](https://www.raywenderlich.com/) and his team in their SwiftUI course.
 
