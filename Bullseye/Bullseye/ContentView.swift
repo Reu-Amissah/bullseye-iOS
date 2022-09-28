@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+     
+    @State private var alertIsVisible: Bool = false
+    @State private var sliderValue: Double = 50.0
+    
     var body: some View {
         VStack {
             Text("PUT THE BULLSEYE AS CLOSE AS YOU CAN TO")
@@ -24,15 +28,23 @@ struct ContentView: View {
                 Text("1")
                     .font(.callout)
                     .bold()
-                Slider(value: .constant(50), in: 1.0...100.0)
+                Slider(value: self.$sliderValue, in: 1.0...100.0)
                 Text("100")
                     .font(.callout)
                     .bold()
             }
-            Button(action: {}) {
+            Button(action: {
+                print("Hello  SwiftUI")
+                self.alertIsVisible = true
+            }) {
                 Text("Hit Me")
             }.padding()
-            
+                .alert("Hello there!", isPresented: $alertIsVisible) {
+                  Button("Awesome!") { }
+                } message: {
+                  Text("This is my first pop-up")
+                }
+
         }
         .padding()
     }
