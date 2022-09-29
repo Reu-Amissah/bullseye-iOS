@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
      
-    @State private var alertIsVisible: Bool = false
-    @State private var sliderValue: Double = 50.0
-    @State private var game: Game = Game()
+    @State private var alertIsVisible = false
+    @State private var sliderValue = 50.0
+    @State private var game = Game()
     
     var body: some View {
         VStack {
@@ -29,7 +29,7 @@ struct ContentView: View {
                 Text("1")
                     .font(.callout)
                     .bold()
-                Slider(value: self.$sliderValue, in: 1.0...100.0)
+                Slider(value: $sliderValue, in: 1.0...100.0)
                 Text("100")
                     .font(.callout)
                     .bold()
@@ -37,8 +37,8 @@ struct ContentView: View {
             
             //hit me Button
             Button(action: {
-                
-                self.alertIsVisible = true
+                print("Hello Swift")
+                alertIsVisible = true
             }) {
                 Text("Hit Me")
             }.padding()
@@ -48,10 +48,10 @@ struct ContentView: View {
                 } message: {
                     
                     //round slider Value to nearest whole number
-                    let roundedValue: Int = Int(self.sliderValue
+                    let roundedValue = Int(sliderValue
                         .rounded())
     
-                    Text("The slider's value is \(roundedValue).\n" + "You scored \(self.game.points(sliderValue: roundedValue)) points this round")
+                    Text("The slider's value is \(roundedValue).\n" + "You scored \(game.points(sliderValue: roundedValue)) points this round")
                 }
 
         }
