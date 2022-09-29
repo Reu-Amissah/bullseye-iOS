@@ -34,6 +34,8 @@ struct ContentView: View {
                     .font(.callout)
                     .bold()
             }
+            
+            //hit me Button
             Button(action: {
                 print("Hello  SwiftUI")
                 self.alertIsVisible = true
@@ -44,8 +46,11 @@ struct ContentView: View {
                 .alert("Hello there!", isPresented: $alertIsVisible) {
                   Button("Awesome!") { }
                 } message: {
-                    var roundedValue: Int = Int(self.sliderValue
+                    
+                    //round slider Value to nearest whole number
+                    let roundedValue: Int = Int(self.sliderValue
                         .rounded())
+    
                     Text("The slider's value is \(roundedValue).\n" + "You scored \(self.game.points(sliderValue: roundedValue)) points this round")
                 }
 
