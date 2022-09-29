@@ -8,16 +8,13 @@
 import Foundation
 
 struct Game {
-    var target: Int = Int.random(in: 1...100) //random input generator
-    var score: Int = 0
-    var round: Int = 1
+    var target = Int.random(in: 1...100) //random input generator
+    var score = 0
+    var round = 1
     
     func points(sliderValue: Int) -> Int {
-        let difference: Int
-        difference = abs(self.target - sliderValue)
-        
-        let awardedPoints: Int = 100 - difference
-        return awardedPoints
+        return 100 - abs(target - sliderValue)
+        //or //  100 - abs(target - sliderValue)
     }
     
     // subtract slider from target, if target value is bigger...else vice versa
