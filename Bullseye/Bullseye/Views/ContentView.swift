@@ -37,7 +37,7 @@ struct ContentView: View {
             
             //hit me Button
             Button(action: {
-                print("Hello  SwiftUI")
+                
                 self.alertIsVisible = true
             }) {
                 Text("Hit Me")
