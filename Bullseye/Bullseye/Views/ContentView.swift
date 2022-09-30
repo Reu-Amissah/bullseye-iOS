@@ -15,12 +15,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("PUT THE BULLSEYE AS CLOSE AS YOU CAN TO")
+            Text("🎯🎯🎯\nPut the bullseye as close as you can to".uppercased())
                 .bold()
+                .kerning(2.0)
                 .multilineTextAlignment(.center)
                 .lineSpacing(4.0)
                 .font(.footnote)
-                .kerning(2.0)
+                .padding(.leading, 30.0)
+                .padding(.trailing, 30.0)
             Text(String(game.target))
                 .font(.largeTitle)
                 .fontWeight(.black)
@@ -34,14 +36,16 @@ struct ContentView: View {
                     .font(.callout)
                     .bold()
             }
+            .padding()
             
             //hit me Button
             Button(action: {
                 print("Hello Swift")
                 alertIsVisible = true
             }) {
-                Text("Hit Me")
+                Text("Hit Me".uppercased())
                     .bold()
+                    .font(.title3)
             }
                 .padding(20.0)
                 .background(Color.blue)
