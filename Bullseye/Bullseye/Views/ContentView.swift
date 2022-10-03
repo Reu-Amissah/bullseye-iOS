@@ -30,6 +30,7 @@ struct ContentView: View {
             VStack {
                 Text("🎯🎯🎯\nPut the bullseye as close as you can to".uppercased())
                     .bold()
+                    .foregroundColor(Color("TextColor"))
                     .kerning(2.0)
                     .multilineTextAlignment(.center)
                     .lineSpacing(4.0)
@@ -37,6 +38,7 @@ struct ContentView: View {
                     .padding(.leading, 30.0)
                     .padding(.trailing, 30.0)
                 Text(String(game.target))
+                    .foregroundColor(Color("TextColor"))
                     .font(.largeTitle)
                     .fontWeight(.black)
                     .kerning(-1.0)
@@ -44,10 +46,12 @@ struct ContentView: View {
                     Text("1")
                         .font(.callout)
                         .bold()
+                        .foregroundColor(Color("TextColor"))
                     Slider(value: $sliderValue, in: 1.0...100.0)
                     Text("100")
                         .font(.callout)
                         .bold()
+                        .foregroundColor(Color("TextColor"))
                 }
                 .padding()
                 
@@ -59,6 +63,7 @@ struct ContentView: View {
                     Text("Hit Me".uppercased())
                         .bold()
                         .font(.title3)
+                        
                 }
                     .padding(20.0)
                     .background(
