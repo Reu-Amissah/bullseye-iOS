@@ -15,6 +15,7 @@
 		D36B0DFB28E3BCC600D78DDC /* BullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B0DFA28E3BCC600D78DDC /* BullseyeTests.swift */; };
 		D36B0E0528E3BCC600D78DDC /* BullseyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B0E0428E3BCC600D78DDC /* BullseyeUITests.swift */; };
 		D36B0E0728E3BCC600D78DDC /* BullseyeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B0E0628E3BCC600D78DDC /* BullseyeUITestsLaunchTests.swift */; };
+		D39AF81E28EB199A00E889CA /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AF81D28EB199A00E889CA /* TextViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		D36B0E0028E3BCC600D78DDC /* BullseyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullseyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36B0E0428E3BCC600D78DDC /* BullseyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeUITests.swift; sourceTree = "<group>"; };
 		D36B0E0628E3BCC600D78DDC /* BullseyeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D39AF81D28EB199A00E889CA /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				D36B0DEB28E3BCC300D78DDC /* ContentView.swift */,
+				D39AF81D28EB199A00E889CA /* TextViews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D36B0DEC28E3BCC300D78DDC /* ContentView.swift in Sources */,
+				D39AF81E28EB199A00E889CA /* TextViews.swift in Sources */,
 				D32C5FFB28E525AC00887119 /* Game.swift in Sources */,
 				D36B0DEA28E3BCC300D78DDC /* BullseyeApp.swift in Sources */,
 			);

@@ -28,20 +28,10 @@ struct ContentView: View {
                 //both top and bottom edges
             
             VStack {
-                Text("🎯🎯🎯\nPut the bullseye as close as you can to".uppercased())
-                    .bold()
-                    .foregroundColor(Color("TextColor"))
-                    .kerning(2.0)
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(4.0)
-                    .font(.footnote)
+                InstructionsText(text: "🎯🎯🎯\nPut the bullseye as close as you can to")
                     .padding(.leading, 30.0)
                     .padding(.trailing, 30.0)
-                Text(String(game.target))
-                    .foregroundColor(Color("TextColor"))
-                    .font(.largeTitle)
-                    .fontWeight(.black)
-                    .kerning(-1.0)
+                BigNumberText(text: String(game.target))
                 HStack{
                     Text("1")
                         .font(.callout)
