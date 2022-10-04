@@ -69,7 +69,7 @@ struct HitMeButton: View{
     
     var body: some View {
         Button(action: {
-            print("Hello SwiftUI")
+            print("Hello Swift")
             alertIsVisible = true
         }) {
             HitMeText(text: "Hit Me")
