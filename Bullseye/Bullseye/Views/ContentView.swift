@@ -19,8 +19,8 @@ struct ContentView: View {
         //over here the ZStack is used to stack a color for the screens
         //background
         //implementing the idea of a "Background Color"
+        
         ZStack {
-            
             
             Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
@@ -28,10 +28,9 @@ struct ContentView: View {
                 //both top and bottom edges
             
             VStack {
-                InstructionsText(text: "🎯🎯🎯\nPut the bullseye as close as you can to")
-                    .padding(.leading, 30.0)
-                    .padding(.trailing, 30.0)
-                BigNumberText(text: String(game.target))
+                
+                InstructionsView(game: $game)
+                
                 HStack{
                     Text("1")
                         .font(.callout)
@@ -77,6 +76,19 @@ struct ContentView: View {
 
             }
         }
+    }
+}
+
+//reusable INSTRUCTIONS VIEW component
+struct InstructionsView: View{
+    
+    @Binding var game: Game
+    
+    var body: some View{
+        InstructionsText(text: "🎯🎯🎯\nPut the bullseye as close as you can to")
+            .padding(.leading, 30.0)
+            .padding(.trailing, 30.0)
+        BigNumberText(text: String(game.target))
     }
 }
 
