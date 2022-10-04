@@ -73,7 +73,6 @@ struct HitMeButton: View{
             alertIsVisible = true
         }) {
             HitMeText(text: "Hit Me")
-                .font(.callout)
 
         }
             .padding(20.0)
