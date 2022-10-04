@@ -15,10 +15,6 @@ struct ContentView: View {
     
     var body: some View {
         
-        //the ZStack stacks views on top of themselves
-        //over here the ZStack is used to stack a color for the screens
-        //background
-        //implementing the idea of a "Background Color"
         
         ZStack {
             
@@ -88,6 +84,13 @@ struct HitMeButton: View{
             })
             .foregroundColor(Color.white)
             .cornerRadius(21.0)
+            .overlay(
+                RoundedRectangle(cornerRadius: 21.0)
+                    .strokeBorder(
+                        Color.white,
+                        lineWidth: 2.0
+                    )
+            )
             .alert("Hello there!", isPresented: $alertIsVisible) {
               Button("Awesome!") { }
             } message: {
