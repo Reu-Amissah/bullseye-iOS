@@ -33,9 +33,35 @@ struct BigNumberText: View {
     }
 }
 
+struct SliderLabelText: View{
+    
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .font(.callout)
+            .bold()
+            .foregroundColor(Color("TextColor"))
+    }
+}
+
+struct HitMeText: View{
+    var text: String
+    
+    var body: some View {
+        Text(text.uppercased())
+            .bold()
+            .font(.title3)
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         InstructionsText(text: "Instructions")
         BigNumberText(text: "50")
+        SliderLabelText(text: "SliderText")
+        HitMeText(text: "HitMe")
     }
+    
 }
+
