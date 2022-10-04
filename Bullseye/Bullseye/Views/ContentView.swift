@@ -72,7 +72,7 @@ struct HitMeButton: View{
             print("Hello Swift")
             alertIsVisible = true
         }) {
-            HitMeText(text: "Don't Hit Me")
+            HitMeText(text: "Hit Me")
         }
             .padding(20.0)
             .background(
