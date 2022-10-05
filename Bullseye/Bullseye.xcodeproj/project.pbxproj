@@ -16,6 +16,7 @@
 		D36B0E0528E3BCC600D78DDC /* BullseyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B0E0428E3BCC600D78DDC /* BullseyeUITests.swift */; };
 		D36B0E0728E3BCC600D78DDC /* BullseyeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B0E0628E3BCC600D78DDC /* BullseyeUITestsLaunchTests.swift */; };
 		D39AF81E28EB199A00E889CA /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AF81D28EB199A00E889CA /* TextViews.swift */; };
+		D3EDED5028EE1B8500D58D1E /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EDED4F28EE1B8500D58D1E /* RoundViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		D36B0E0428E3BCC600D78DDC /* BullseyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeUITests.swift; sourceTree = "<group>"; };
 		D36B0E0628E3BCC600D78DDC /* BullseyeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D39AF81D28EB199A00E889CA /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		D3EDED4F28EE1B8500D58D1E /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				D36B0DEB28E3BCC300D78DDC /* ContentView.swift */,
 				D39AF81D28EB199A00E889CA /* TextViews.swift */,
+				D3EDED4F28EE1B8500D58D1E /* RoundViews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EDED5028EE1B8500D58D1E /* RoundViews.swift in Sources */,
 				D36B0DEC28E3BCC300D78DDC /* ContentView.swift in Sources */,
 				D39AF81E28EB199A00E889CA /* TextViews.swift in Sources */,
 				D32C5FFB28E525AC00887119 /* Game.swift in Sources */,
