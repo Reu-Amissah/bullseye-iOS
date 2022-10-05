@@ -18,10 +18,7 @@ struct ContentView: View {
         
         ZStack {
             
-            Color("BackgroundColor")
-                .edgesIgnoringSafeArea(.all)
-                // this ignores safe area view for
-                //both top and bottom edges
+            BackgroundView(game: $game)
             
             VStack {
                 

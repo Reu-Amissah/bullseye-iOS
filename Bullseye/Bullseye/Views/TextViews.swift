@@ -55,12 +55,23 @@ struct HitMeText: View{
     }
 }
 
+struct LabelTextView: View{
+    var text: String
+    
+    var body: some View {
+        Text(text.uppercased())
+            .bold()
+            .font(.caption)
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         InstructionsText(text: "Instructions")
         BigNumberText(text: "50")
         SliderLabelText(text: "SliderText")
         HitMeText(text: "HitMe")
+        LabelTextView(text: "Score")
     }
     
 }
