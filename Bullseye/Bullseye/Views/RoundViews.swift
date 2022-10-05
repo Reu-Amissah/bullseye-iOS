@@ -38,11 +38,34 @@ struct RoundedImageViewFilled: View {
     }
 }
 
+struct RoundedRectTextView: View {
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .bold() 
+            .font(.title)
+            .foregroundColor(Color("TextColor"))
+            .kerning(-0.2)
+            .frame(width: 68.0, height: 56.0)
+            .background(
+                RoundedRectangle(cornerRadius: 21.0)
+                    .fill(Color("BackgroundColor"))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 21)
+                    .stroke(lineWidth: 2.0)
+                    .foregroundColor(Color("ButtonStrokeColor"))
+            )
+    }
+}
+
 struct PreviewView: View {
     var body: some View {
         VStack (spacing: 10) {
             RoundedImageViewStroked(systemName: "arrow.counterclockwise")
             RoundedImageViewFilled(systemName: "list.dash")
+            RoundedRectTextView(text: "999")
         }
     }
 }
