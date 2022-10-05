@@ -17,6 +17,7 @@
 		D36B0E0728E3BCC600D78DDC /* BullseyeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B0E0628E3BCC600D78DDC /* BullseyeUITestsLaunchTests.swift */; };
 		D39AF81E28EB199A00E889CA /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AF81D28EB199A00E889CA /* TextViews.swift */; };
 		D3EDED5028EE1B8500D58D1E /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EDED4F28EE1B8500D58D1E /* RoundViews.swift */; };
+		D3EDED5228EE363100D58D1E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EDED5128EE363100D58D1E /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		D36B0E0628E3BCC600D78DDC /* BullseyeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D39AF81D28EB199A00E889CA /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		D3EDED4F28EE1B8500D58D1E /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
+		D3EDED5128EE363100D58D1E /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				D36B0DEB28E3BCC300D78DDC /* ContentView.swift */,
 				D39AF81D28EB199A00E889CA /* TextViews.swift */,
 				D3EDED4F28EE1B8500D58D1E /* RoundViews.swift */,
+				D3EDED5128EE363100D58D1E /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EDED5228EE363100D58D1E /* BackgroundView.swift in Sources */,
 				D3EDED5028EE1B8500D58D1E /* RoundViews.swift in Sources */,
 				D36B0DEC28E3BCC300D78DDC /* ContentView.swift in Sources */,
 				D39AF81E28EB199A00E889CA /* TextViews.swift in Sources */,
