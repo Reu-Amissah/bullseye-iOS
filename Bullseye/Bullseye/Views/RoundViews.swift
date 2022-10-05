@@ -43,16 +43,19 @@ struct RoundedRectTextView: View {
     
     var body: some View {
         Text(text)
+            .bold() 
             .font(.title)
             .foregroundColor(Color("TextColor"))
-            .frame(width: 68.0, height: 68.0)
+            .kerning(-0.2)
+            .frame(width: 68.0, height: 56.0)
             .background(
                 RoundedRectangle(cornerRadius: 21.0)
                     .fill(Color("BackgroundColor"))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 21)
-                    .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 2.0)
+                    .stroke(lineWidth: 2.0)
+                    .foregroundColor(Color("ButtonStrokeColor"))
             )
     }
 }
