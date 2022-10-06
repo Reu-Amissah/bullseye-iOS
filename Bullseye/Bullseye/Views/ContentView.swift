@@ -66,7 +66,6 @@ struct HitMeButton: View{
     
     var body: some View {
         Button(action: {
-            print("Hello SwiftUI")
             alertIsVisible = true
         }) {
             HitMeText(text: "Hit Me")
@@ -88,7 +87,13 @@ struct HitMeButton: View{
                     )
             )
             .alert("Hello there!", isPresented: $alertIsVisible) {
-              Button("Awesome!") { }
+              Button("Awesome!") {
+                  let points = game.points(sliderValue: Int(sliderValue))
+                  
+                  game.startNewRound(points: points)
+                  
+                  
+              }
             } message: {
 
                 //round slider Value to nearest whole number
