@@ -17,5 +17,11 @@ struct Game {
         //or //  100 - abs(target - sliderValue)
     }
     
+    mutating func startNewRound (points: Int){
+        self.score += points
+        round += 1
+        target = Int.random(in: 1...100)
+    }
+    
     // subtract slider from target, if target value is bigger...else vice versa
 }
