@@ -37,5 +37,11 @@ struct Game {
         target = Int.random(in: 1...100)
     }
     
+    mutating func restart () {
+        self.score = 0
+        round = 1
+        target = Int.random(in: 1...100)
+    }
+    
     // subtract slider from target, if target value is bigger...else vice versa
 }
