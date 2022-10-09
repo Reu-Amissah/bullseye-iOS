@@ -52,7 +52,7 @@ final class BullseyeTests: XCTestCase {
     }
     
     func testScoreClose() {
-        let guess = game.target + 5
+        let guess = game.target + 2
         let score = game.points(sliderValue: guess)
         XCTAssertEqual(score, 98 + 50)
     }
