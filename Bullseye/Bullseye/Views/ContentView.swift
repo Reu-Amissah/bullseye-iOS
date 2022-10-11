@@ -23,11 +23,22 @@ struct ContentView: View {
             VStack {
                 
                 InstructionsView(game: $game)
-                HitMeButton(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
-                    .padding(.top, 100)
+                if alertIsVisible {
+                    PointsView(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
+                        .transition(.scale)
+                }else {
+                    HitMeButton(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
+                        .padding(.top, 100)
+                        .transition(.scale)
+                }
+                
 
             }
-            SliderView(sliderValue: $sliderValue)
+            if !alertIsVisible{
+                SliderView(sliderValue: $sliderValue)
+                    .transition(.scale)
+                
+            }
         }
     }
 }
@@ -67,7 +78,9 @@ struct HitMeButton: View{
     
     var body: some View {
         Button(action: {
-            alertIsVisible = true
+            withAnimation {
+                alertIsVisible = true
+            } //---ANIMATION----
         }) {
             HitMeText(text: "Hit Me")
         }
@@ -87,23 +100,7 @@ struct HitMeButton: View{
                         lineWidth: 2.0
                     )
             )
-            .alert("Hello there!", isPresented: $alertIsVisible) {
-              Button("Awesome!") {
-                  let points = game.points(sliderValue: Int(sliderValue))
-                  
-                  game.startNewRound(points: points)
-                  
-                  
-              }
-            } message: {
-
-                //round slider Value to nearest whole number
-                let roundedValue = Int(sliderValue
-                    .rounded())
-
-                Text("The slider's value is \(roundedValue).\n" + "You scored \(game.points(sliderValue: roundedValue)) points this round")
-            }
-
+        
     }
 }
 

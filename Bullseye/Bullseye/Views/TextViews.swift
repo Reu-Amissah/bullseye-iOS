@@ -94,7 +94,7 @@ struct ButtonText: View{
                 Color.accentColor
             )
             .cornerRadius(12)
-            .foregroundColor(Color("ButtonFilledTextColor"))
+            .foregroundColor(Color.white)
             .font(.body)
         
         
