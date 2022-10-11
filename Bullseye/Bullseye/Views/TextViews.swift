@@ -68,13 +68,52 @@ struct LabelTextView: View{
     }
 }
 
+struct BodyText: View{
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .multilineTextAlignment(.center)
+            .font(.subheadline)
+            .foregroundColor(Color("TextColor"))
+            .fontWeight(.semibold)
+            .lineSpacing(14)
+            
+    }
+}
+
+struct ButtonText: View{
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .bold()
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(
+                Color.accentColor
+            )
+            .cornerRadius(12)
+            .foregroundColor(Color("ButtonFilledTextColor"))
+            .font(.body)
+        
+        
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
-        InstructionsText(text: "Instructions")
-        BigNumberText(text: "50")
-        SliderLabelText(text: "SliderText")
-        HitMeText(text: "HitMe")
-        LabelTextView(text: "Score")
+        
+        VStack {
+            InstructionsText(text: "Instructions")
+            BigNumberText(text: "50")
+            SliderLabelText(text: "4")
+            HitMeText(text: "HitMe")
+            LabelTextView(text: "Score")
+            BodyText(text: "You scored 200 Points\n🎉🎉🎉")
+            ButtonText(text: "Start New Round")
+        }
+        .padding()
     }
     
 }
