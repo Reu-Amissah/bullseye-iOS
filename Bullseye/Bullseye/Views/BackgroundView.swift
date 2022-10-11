@@ -32,7 +32,9 @@ struct TopView: View {
             Button(action: ({
                 game.restart()
             })) {
-                RoundedImageViewStroked(systemName: "arrow.counterclockwise")            }
+                RoundedImageViewStroked(systemName: "arrow.counterclockwise")
+                
+            }
             Spacer()
             RoundedImageViewFilled(systemName: "list.dash")
         }
