@@ -18,6 +18,7 @@
 		D3748A0C28F4EDC600E36078 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3748A0B28F4EDC600E36078 /* PointsView.swift */; };
 		D3953E9A28F4FFB90028D571 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3953E9928F4FFB90028D571 /* Constants.swift */; };
 		D39AF81E28EB199A00E889CA /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39AF81D28EB199A00E889CA /* TextViews.swift */; };
+		D3AD7E0328F786E300E3DF68 /* LeaderBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD7E0228F786E300E3DF68 /* LeaderBoardView.swift */; };
 		D3EDED5028EE1B8500D58D1E /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EDED4F28EE1B8500D58D1E /* RoundViews.swift */; };
 		D3EDED5228EE363100D58D1E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EDED5128EE363100D58D1E /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		D3748A0B28F4EDC600E36078 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 		D3953E9928F4FFB90028D571 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D39AF81D28EB199A00E889CA /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		D3AD7E0228F786E300E3DF68 /* LeaderBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardView.swift; sourceTree = "<group>"; };
 		D3EDED4F28EE1B8500D58D1E /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
 		D3EDED5128EE363100D58D1E /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 				D3EDED4F28EE1B8500D58D1E /* RoundViews.swift */,
 				D3EDED5128EE363100D58D1E /* BackgroundView.swift */,
 				D3748A0B28F4EDC600E36078 /* PointsView.swift */,
+				D3AD7E0228F786E300E3DF68 /* LeaderBoardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				D3EDED5028EE1B8500D58D1E /* RoundViews.swift in Sources */,
 				D36B0DEC28E3BCC300D78DDC /* ContentView.swift in Sources */,
 				D3953E9A28F4FFB90028D571 /* Constants.swift in Sources */,
+				D3AD7E0328F786E300E3DF68 /* LeaderBoardView.swift in Sources */,
 				D39AF81E28EB199A00E889CA /* TextViews.swift in Sources */,
 				D3748A0C28F4EDC600E36078 /* PointsView.swift in Sources */,
 				D32C5FFB28E525AC00887119 /* Game.swift in Sources */,
