@@ -9,18 +9,28 @@ import SwiftUI
 
 struct LeaderBoardView: View {
     var body: some View {
+        RowView(index: 1, score: 10, date: Date())
+    }
+}
+
+struct RowView: View {
+    let index: Int
+    let score: Int
+    let date: Date
+    
+    var body: some View {
         HStack{
-            RoundedTextView(text: "1")
+            RoundedTextView(text: String(index))
             Spacer()
-            ScoreText(text: "10")
+            ScoreText(text: String(score))
             Spacer()
-            DateText(text: "12:31 PM")
+            DateText(text: "19-10-2000")
         }
-        .padding()
-        .overlay(
-            RoundedRectangle(cornerRadius: Constants.General.roundRectCornerRadius)
-                .strokeBorder(Color("ButtonStrokeColore"), lineWidth: Constants.General.strokeWidth)
+        .background(
+            RoundedRectangle(cornerRadius: .infinity)
+                .strokeBorder(Color("LeaderboardRowColor"), lineWidth: Constants.General.strokeWidth)
         )
+        .padding()
     }
 }
 
