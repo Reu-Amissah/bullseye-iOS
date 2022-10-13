@@ -101,48 +101,41 @@ struct ButtonText: View{
     }
 }
 
-struct RoundedTextView: View{
-    var text: String
-    
-    var body: some View {
-        Text(text)
-            .bold()
-            .font(.title3)
-            .fontWeight(.semibold)
-            .foregroundColor(Color("TextColor"))
-            .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
-            .overlay(
-                Circle()
-                    .strokeBorder(
-                        Color("ButtonStrokeColor"), lineWidth: Constants.General.strokeWidth
-                    )
-            )
-        
-        
-    }
-}
-
 struct ScoreText: View{
-    var text: String
+    var score: Int
     
     var body: some View {
-        Text(text)
+        Text(String(self.score))
             .bold()
             .font(.title3)
             .fontWeight(.semibold)
             .foregroundColor(Color("TextColor"))
-            .kerning(2.0)
+            .kerning(-2.0)
+            .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
     }
 }
 
 struct DateText: View{
-    var text: String
+    var date: Date
     
     var body: some View {
-        Text(text)
+        Text(date, style: .time)
             .bold()
             .font(.title3)
             .fontWeight(.semibold)
+            .foregroundColor(Color("TextColor"))
+            .kerning(-2.0)
+            .frame(width: Constants.Leaderboard.leaderboardDateColWidth)
+    }
+}
+
+struct BigBoldText: View{
+    var text: String
+    
+    var body: some View {
+        Text(text.uppercased())
+            .fontWeight(.black)
+            .font(.title)
             .foregroundColor(Color("TextColor"))
             .kerning(2.0)
     }
@@ -159,9 +152,9 @@ struct TextViews_Previews: PreviewProvider {
             LabelTextView(text: "Score")
             BodyText(text: "You scored 200 Points\n🎉🎉🎉")
             ButtonText(text: "Start New Round")
-            RoundedTextView(text: "10")
-            ScoreText(text: "15")
-            DateText(text: "19-10-2000")
+            ScoreText(score: 10)
+            DateText(date: Date())
+            BigBoldText(text: "LeaderBoard")
         }
         .padding()
     }
