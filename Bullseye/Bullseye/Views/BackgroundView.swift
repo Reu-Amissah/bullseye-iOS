@@ -47,7 +47,7 @@ struct NumberView: View {
     
     var body: some View {
         VStack {
-            LabelTextView(text: title)
+            LabelText(text: title)
             RoundedRectTextView(text: text)
         }
     }

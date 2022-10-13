@@ -56,7 +56,7 @@ struct HitMeText: View{
     }
 }
 
-struct LabelTextView: View{
+struct LabelText: View{
     var text: String
     
     var body: some View {
@@ -149,7 +149,7 @@ struct TextViews_Previews: PreviewProvider {
             BigNumberText(text: "50")
             SliderLabelText(text: "4")
             HitMeText(text: "HitMe")
-            LabelTextView(text: "Score")
+            LabelText(text: "Score")
             BodyText(text: "You scored 200 Points\n🎉🎉🎉")
             ButtonText(text: "Start New Round")
             ScoreText(score: 10)
