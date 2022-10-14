@@ -7,10 +7,16 @@
 
 import Foundation
 
+struct LeaderboardEntry {
+    let score: Int
+    let date: Date
+}
+
 struct Game {
     var target = Int.random(in: 1...100) //random input generator
     var score = 0
     var round = 1
+    var leaderboardEntries: [LeaderboardEntry] = []
     
     func points(sliderValue: Int) -> Int {
         var bonus: Int = 0
@@ -35,12 +41,20 @@ struct Game {
         self.score += points
         round += 1
         target = Int.random(in: 1...100)
+        addToLeaderboard(point: points)
+        
     }
     
     mutating func restart () {
         self.score = 0
         round = 1
         target = Int.random(in: 1...100)
+    }
+    
+    mutating func addToLeaderboard(point: Int) {
+        leaderboardEntries.append(LeaderboardEntry(score: point, date: Date()))
+        leaderboardEntries.sort { $0.score > $1.score }
+        
     }
     
     // subtract slider from target, if target value is bigger...else vice versa
