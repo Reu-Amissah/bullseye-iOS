@@ -41,7 +41,7 @@ struct InstructionsView: View{
     
     var body: some View{
         InstructionsText(text: "🎯🎯🎯\nPut the bullseye as close as you can to")
-            .padding(.leading, 31.0)
+            .padding(.leading, 30.0)
             .padding(.trailing, 30.0)
         BigNumberText(text: String(game.target))
     }
