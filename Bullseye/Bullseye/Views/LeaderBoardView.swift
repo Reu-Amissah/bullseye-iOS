@@ -73,6 +73,7 @@ struct HeaderView: View {
                 }) {
                     RoundedImageViewFilled(systemName: "xmark")
                         .padding(.trailing)
+                        .padding(.leading)
                 }
             }
         }
