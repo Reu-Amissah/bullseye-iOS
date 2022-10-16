@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LeaderBoardView: View {
     @Binding var leaderboardIsShowing: Bool
+    @Binding var game: Game
     
     var body: some View {
         
@@ -19,7 +20,16 @@ struct LeaderBoardView: View {
             VStack (spacing: 10) {
                 HeaderView(leaderboardIsShowing: $leaderboardIsShowing)
                 LabelView()
-                RowView(index: 1, score: 10, date: Date())
+                
+                ScrollView {
+                    VStack (spacing: 10) {
+                        ForEach(game.leaderboardEntries.indices) {i in
+                            
+                            let leaderboardEntry = game.leaderboardEntries[i]
+                            RowView(index: i, score: leaderboardEntry.score, date: Date())
+                        }
+                    }
+                }
             }
         }
     }
@@ -64,6 +74,7 @@ struct HeaderView: View {
                     BigBoldText(text: "Leaderboard")
                 }
             }
+            .padding(.top)
             HStack {
                 Spacer()
                 Button(action: {
@@ -73,9 +84,9 @@ struct HeaderView: View {
                 }) {
                     RoundedImageViewFilled(systemName: "xmark")
                         .padding(.trailing)
-                        .padding(.leading)
                 }
             }
+            .padding(.top)
         }
     }
 }
@@ -100,8 +111,9 @@ struct LabelView: View {
 
 struct LeaderBoardView_Previews: PreviewProvider {
     static private var leaderboardIsShowing = Binding.constant(false)
+    static private var game = Binding.constant(Game(loadTestData: true))
     
     static var previews: some View {
-        LeaderBoardView(leaderboardIsShowing: leaderboardIsShowing)
+        LeaderBoardView(leaderboardIsShowing: leaderboardIsShowing, game: game)
     }
 }
