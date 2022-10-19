@@ -5,4 +5,11 @@ This a `code along` project design by [Ray Wenderlich](https://www.raywenderlich
 It's a simple but fun game that allows the user to predict, by using a slider, the randomly generated number provided
 The user is then provided a score based on how close their answer is to the random number.
 
-![IMG_2449](https://user-images.githubusercontent.com/75743058/196666757-b8c5d911-3619-47fb-97ba-548af19db0c6.PNG)
+![IMG_2449](https://user-images.githubusercontent.com/75743058/196667008-c81c1124-1c58-43ab-818b-713c34cbfe0e.PNG)
+![IMG_2450](https://user-images.githubusercontent.com/75743058/196667030-02db126f-b729-4e6c-9e2d-70bc1b7c425e.PNG)
+![IMG_2451](https://user-images.githubusercontent.com/75743058/196667055-2fd342a8-c202-470b-927c-9652edf5c8dd.PNG)
+![IMG_2452](https://user-images.githubusercontent.com/75743058/196667077-372128a5-e40d-4638-953b-2d2311632edb.PNG)
+![IMG_2453](https://user-images.githubusercontent.com/75743058/196667099-fdd01d84-8f66-4e42-a2af-93147c099452.PNG)
+![IMG_2456](https://user-images.githubusercontent.com/75743058/196667117-6bc103d5-0707-456c-a727-e6bcde40189c.PNG)
+![IMG_2455](https://user-images.githubusercontent.com/75743058/196667141-99fd8e1c-c197-4d84-8fb5-57df06cbee03.PNG)
+
